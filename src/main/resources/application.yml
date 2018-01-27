@@ -1,6 +1,12 @@
 spring:
   application:
-    name: config
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/TedWithAHammer/sc-config-center
+          search-paths: config-server
 server:
   port: 50001
 eureka:
